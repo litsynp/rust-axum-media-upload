@@ -6,3 +6,13 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+axum = { version = "0.6.20", features = ["http1", "json", "matched-path", "original-uri", "tokio", "tower-log", "form", "query", "multipart"] }
+hyper = "0.14.27"
+tokio = { version = "1.32.0", features = ["full"] }
+tower = "0.4.13"
+tower-http = { version = "0.4.4", features = ["trace"] }
+tracing = "0.1.37"
+tracing-subscriber = { version = "0.3.17", features = ["env-filter"] }
+utoipa = { version = "3.5.0", features = ["axum_extras"] }
+utoipa-swagger-ui = { version = "3.1.5", features = ["axum"] }
+log = "0.4.20"
